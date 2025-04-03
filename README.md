@@ -1,38 +1,54 @@
-# Employee Attrition Prediction
+# **IBM - HR Analytics Employee Attrition & Performance**
 
-## Project Summary
+## **Introduction**
+This project aims to predict employee attrition using various machine learning models. The dataset includes features such as employee demographics, job satisfaction, and performance metrics. The goal is to help HR professionals identify employees at risk of leaving and take proactive measures to improve retention.
 
-This project aims to predict employee attrition using a logistic regression model. The dataset contains various employee attributes which are used to predict whether an employee will leave the company.
+## **Data Collection**
+The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)]. It contains detailed employee information, including:
+- **Employee Demographics**: Age, gender, marital status
+- **Job-Related Data**: Job satisfaction, performance rating, job role
+- **Work Environment**: Workload, benefits, work-life balance
+- **Company Performance**: Business unit, revenue contribution
 
-## Data Preprocessing
+## **Objective**
+- The main objective of this project is to predict employee attrition based on various employee characteristics. 
+- By applying machine learning techniques, we aim to identify the primary factors leading to employee turnover and predict future attrition.
 
-I performed several data preprocessing steps to prepare the dataset for modeling:
+## **Methodology**
 
-- **Encoding Categorical Features:** Categorical variables were encoded to numerical values using techniques like label encoder.
-- **Handling Missing Data:** Any missing values in the dataset were imputed or removed based on the situation.
-- **Scaling Numerical Features:** I used feature scaling to normalize the numerical features for model training.
-- **Class Imbalance:** The dataset exhibited a class imbalance, with fewer employees leaving the company compared to those who stayed. To address this, I applied **SMOTE (Synthetic Minority Over-sampling Technique)** to generate synthetic examples of the minority class.
+### **EDA (Exploratory Data Analysis)**
+- Performed EDA to understand the dataset and uncover hidden patterns:
+- Analyzed feature distributions (e.g., age, job satisfaction, tenure).
+- Identified and handled missing values.
+- Visualized feature correlations with attrition using heatmaps and bar plots.
 
-## Modeling
+### **Feature Engineering**
+To improve model performance, I applied the following feature engineering techniques:
+- Encoding Categorical Features: Converted categorical variables (e.g., job role, department) into numerical values using one-hot encoding and label encoding.\
+- Scaling Numerical Features: Applied MinMaxScaler to normalize numerical features.
+- Handling Class Imbalance: Used **SMOTE** (Synthetic Minority Over-sampling Technique) to generate synthetic examples for the minority class (employees who left).
 
-I trained a logistic regression model on the preprocessed data. The model was evaluated using the following metrics:
+### **Model Selection**
+ - Trained a logistic regression model on the preprocessed data.
+ - While the model performed well on the majority class, it struggled with the minority class (employees at risk of leaving).
+ - Adjusted the decision threshold, which resulted in an improvement in recall for the minority class
 
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-score**
-
-While the model performed well on the majority class, it struggled with the minority class (employees at risk of leaving). To address this, I adjusted the decision threshold, which resulted in an improvement in recall for the minority class (increased to 0.46).
+## **Model Evaluation**
+Model performance was evaluated using:
+- **Accuracy**: To measure the proportion of correct predictions.
+- **Precision, Recall, F1-Score**: To assess model effectiveness in predicting attrition (positive class).
 
 ## Challenges & Learnings
+Challenges:
+- Class Imbalance: The dataset had significantly fewer attrition cases compared to retained employees, leading to biased predictions.
+- Feature Selection: Some features had low correlation with attrition and were removed for better performance.
 
-The main challenge encountered was handling the **class imbalance**, a common issue in real-world datasets. However, by applying techniques like **SMOTE** and adjusting the **decision threshold**, I was able to improve the model's performance on the minority class.
-
-Key learnings:
-- **SMOTE** can be useful in handling class imbalance by creating synthetic samples for the minority class.
-- **Threshold adjustment** is an effective way to improve recall, especially when predicting the minority class.
+Key Learnings:
+- SMOTE effectively balances datasets by creating synthetic minority class samples.
+- Threshold tuning can significantly improve recall for imbalanced datasets.
+- Feature scaling is crucial for models like logistic regression
 
 ## Next Steps / Future Improvements
 
 - Experiment with other machine learning models, such as **decision trees** or **random forests**, to compare performance and select the best model.
-- Fine
+- Fine-tune hyperparameters for better generalization.
