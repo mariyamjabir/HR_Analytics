@@ -1,4 +1,4 @@
-# **IBM - HR Analytics Employee Attrition & Performance**
+# **HR Analytics Employee Attrition & Performance**
 
 ## **Introduction**
 This project aims to predict employee attrition using various machine learning models. The dataset includes features such as employee demographics, job satisfaction, and performance metrics. The goal is to help HR professionals identify employees at risk of leaving and take proactive measures to improve retention.
