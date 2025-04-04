@@ -4,7 +4,7 @@
 This project aims to predict employee attrition using various machine learning models. The dataset includes features such as employee demographics, job satisfaction, and performance metrics. The goal is to help HR professionals identify employees at risk of leaving and take proactive measures to improve retention.
 
 ## **Data Collection**
-The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)]. It contains detailed employee information, including:
+The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset). It contains detailed employee information, including:
 - **Employee Demographics**: Age, gender, marital status
 - **Job-Related Data**: Job satisfaction, performance rating, job role
 - **Work Environment**: Workload, benefits, work-life balance
@@ -24,7 +24,7 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
 
 ### **Feature Engineering**
 To improve model performance, I applied the following feature engineering techniques:
-- Encoding Categorical Features: Converted categorical variables (e.g., job role, department) into numerical values using one-hot encoding and label encoding.\
+- Encoding Categorical Features: Converted categorical variables (e.g., job role, department) into numerical values using one-hot encoding and label encoding.
 - Scaling Numerical Features: Applied MinMaxScaler to normalize numerical features.
 - Handling Class Imbalance: Used **SMOTE** (Synthetic Minority Over-sampling Technique) to generate synthetic examples for the minority class (employees who left).
 
