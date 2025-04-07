@@ -25,7 +25,7 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
 ### **Feature Engineering**
 To improve model performance, I applied the following feature engineering techniques:
 - Encoding Categorical Features: Converted categorical variables (e.g., job role, department) into numerical values using one-hot encoding and label encoding.
-- Scaling Numerical Features: Applied MinMaxScaler to normalize numerical features.
+- Scaling Numerical Features: Applied StandardScaler to scale numerical features for better model convergence.
 - Handling Class Imbalance: Used **SMOTE** (Synthetic Minority Over-sampling Technique) to generate synthetic examples for the minority class (employees who left).
 
 ### **Model Selection**
