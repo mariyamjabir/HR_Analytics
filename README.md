@@ -12,7 +12,7 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
 
 ## **Objective**
 - The main objective of this project is to predict employee attrition based on various employee characteristics. 
-- By applying machine learning techniques, we aim to identify the primary factors leading to employee turnover and predict future attrition.
+- Applying machine learning techniques to identify the primary factors leading to employee turnover and predict future attrition.
 
 ## **Methodology**
 
