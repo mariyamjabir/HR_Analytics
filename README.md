@@ -25,18 +25,19 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
 ### **Feature Engineering**
 To improve model performance, I applied the following feature engineering techniques:
 - Encoding Categorical Features: Converted categorical variables (e.g., job role, department) into numerical values using one-hot encoding and label encoding.
-- Scaling Numerical Features: Applied MinMaxScaler to normalize numerical features.
+- Scaling Numerical Features: Applied StandardScaler to scale numerical features for better model convergence.
 - Handling Class Imbalance: Used **SMOTE** (Synthetic Minority Over-sampling Technique) to generate synthetic examples for the minority class (employees who left).
 
 ### **Model Selection**
- - Trained a logistic regression model on the preprocessed data.
- - While the model performed well on the majority class, it struggled with the minority class (employees at risk of leaving).
- - Adjusted the decision threshold, which resulted in an improvement in recall for the minority class
+- Trained a logistic regression model on the preprocessed data.
+- The model was evaluated using a threshold tuning approach to improve recall for predicting employees at risk of leaving (minority class).
+- The decision threshold was adjusted to optimize recall and precision balance.
 
 ## **Model Evaluation**
 Model performance was evaluated using:
 - **Accuracy**: To measure the proportion of correct predictions.
 - **Precision, Recall, F1-Score**: To assess model effectiveness in predicting attrition (positive class).
+- A confusion matrix was generated to visually assess the model’s performance and help understand the relationship between the actual and predicted values, providing deeper insights into model accuracy, precision, and recall.
 
 ## Challenges & Learnings
 Challenges:
